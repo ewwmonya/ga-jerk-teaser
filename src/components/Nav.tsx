@@ -57,11 +57,11 @@ const Nav = () => {
             <DropdownMenuTrigger className="p-2 rounded-md border border-white/20 cursor-pointer">
                 <Waves className="text-white h-7 w-7"/ >
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-white p-4 flex flex-col gap-4 shadow-md z-20" >
+            <DropdownMenuContent className="bg-white  flex flex-col shadow-md z-30 w-screen" >
                 {links.map((link) => {
                   const {label, href} = link
-                  return <DropdownMenuItem className="text-lg text-red-950 capitalize p-2" asChild>
-                  <Link key={label} href={href}>{label}</Link>
+                  return <DropdownMenuItem className="text-lg text-red-950 capitalize p-2 " asChild>
+                  <Link key={label} className="hover:bg-red-100 block hover:pl-5 duration-300" href={href}>{label}</Link>
                 </DropdownMenuItem>
                 })}
                 </DropdownMenuContent>

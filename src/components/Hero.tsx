@@ -19,7 +19,7 @@ const Hero = () => {
   return (
     <section >
     <Slider className= " min-h-85 text-black  " {...settings}>
-    <div className='h-70'>
+    <div className='h-85'>
         <Link href="?/shop">
         <Image src={gaJerkHero} 
         alt={''} 
@@ -29,7 +29,7 @@ const Hero = () => {
         </Link>
         </div>
 
-        <div className='h-70'>
+        <div className='h-85'>
         <Link href="?/shop">
         <Image src={gaJerkHero} 
         alt={''} 
@@ -39,7 +39,7 @@ const Hero = () => {
         </Link>
         </div>
 
-        <div className='h-70'>
+        <div className='h-85'>
         <Link href="?/shop">
         <Image src={gaJerkHero} 
         alt={''} 
