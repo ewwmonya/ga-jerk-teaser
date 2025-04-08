@@ -34,7 +34,8 @@ const links = [
 
 const Nav = () => {
   return (
-    <NavigationMenu className="bg-red-700 border-b-slate-200 border-b-4 p-6 ">
+    <NavigationMenu className="absolute top-0 left-0 z-50 w-full bg-red-700/80 backdrop-blur-sm border-b border-white/10 p-6">
+
       <NavigationMenuList className='p-2 hidden md:flex  text-white items-center justify-items-start gap-x-9 text-xl'>
       <h1 className=" text-4xl  font-bold">Ga Jerk</h1>
         {links.map((link) => {

@@ -1,56 +1,42 @@
-import Image from 'next/image';
-import gaJerkHero from '../../public/gaJerk-hero.crop.png'
+import Image from "next/image";
+import gaJerkHero from "../../public/gaJerk-hero2.png";
 import React from "react";
 import Slider from "react-slick";
 import Link from "next/link";
 
-
 const Hero = () => {
-  var settings = {
+  const settings = {
     dots: true,
-   
     infinite: true,
     speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
-    waitForAnimate: false,
-    };
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: true,
+  };
+
   return (
-    <section >
-    <Slider className= " min-h-85 text-black  " {...settings}>
-    <div className='h-85'>
-        <Link href="?/shop">
-        <Image src={gaJerkHero} 
-        alt={''} 
-        priority
-        fill
-        className=''/>
-        </Link>
-        </div>
+<section className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden">
+<Slider {...settings} className='h-full w-full'>
+        
+<div className='relative h-screen w-full'>
+            <Image
+              src={gaJerkHero}
+              alt=''
+              fill
+              className=''
+              priority
+            />
+    <p className="absolute inset-2.5 text-white text-7xl">Hello</p>
+          </div>
 
-        <div className='h-85'>
-        <Link href="?/shop">
-        <Image src={gaJerkHero} 
-        alt={''} 
-        priority
-        fill
-        className=''/>
-        </Link>
-        </div>
 
-        <div className='h-85'>
-        <Link href="?/shop">
-        <Image src={gaJerkHero} 
-        alt={''} 
-        priority
-        fill
-        className=''/>
-        </Link>
-        </div>
-   
-    </Slider>
+      
+      </Slider>
     </section>
-  )
-}
-export default Hero
+  );
+};
+
+export default Hero;

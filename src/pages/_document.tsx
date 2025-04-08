@@ -5,13 +5,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className="antialiased grid grid-cols-6">
-        <div className="col-span-6">
-   
-        </div>
-        <Main />
-        <NextScript />
-      </body>
+      <body className="antialiased bg-white text-black">
+  <Main />
+  <NextScript />
+</body>
     </Html>
   );
 }
