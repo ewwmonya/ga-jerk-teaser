@@ -1,11 +1,55 @@
+import Image from 'next/image';
+import gaJerkHero from '../../public/gaJerk-hero.crop.png'
+import React from "react";
+import Slider from "react-slick";
+import Link from "next/link";
+
+
 const Hero = () => {
+  var settings = {
+    dots: true,
+   
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    waitForAnimate: false,
+    };
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between px-6 py-16 h-2/6 bg-red-700 text-white">
-        <div className="max-w-xl space-y-6">
-            <h1 className="text-4xl md:text-5xl leading-tight font-extrabold text-center">Taste The Fire 🔥</h1>
-            <p>Georgia's boldest beef jerky - crafter for the trails and roads</p>
- 
+    <section >
+    <Slider className= " min-h-85 text-black  " {...settings}>
+    <div className='h-70'>
+        <Link href="?/shop">
+        <Image src={gaJerkHero} 
+        alt={''} 
+        priority
+        fill
+        className=''/>
+        </Link>
         </div>
+
+        <div className='h-70'>
+        <Link href="?/shop">
+        <Image src={gaJerkHero} 
+        alt={''} 
+        priority
+        fill
+        className=''/>
+        </Link>
+        </div>
+
+        <div className='h-70'>
+        <Link href="?/shop">
+        <Image src={gaJerkHero} 
+        alt={''} 
+        priority
+        fill
+        className=''/>
+        </Link>
+        </div>
+   
+    </Slider>
     </section>
   )
 }
